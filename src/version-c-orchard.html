@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Friendly, high-converting custom websites for growing local businesses. Elevaro packages start at $199."
+    />
+    <meta name="theme-color" content="#fffaf8" />
+    <title>Friendly Custom Websites | Elevaro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #fffaf8;
+        --paper: #fff;
+        --grape: #58436f;
+        --text: #392f42;
+        --muted: #756b7c;
+        --lavender: #e9dffa;
+        --mint: #dcf4e7;
+        --peach: #ffe0cc;
+        --yellow: #fff2ae;
+        --rose: #f6cadc;
+        --line: rgba(88, 67, 111, 0.16);
+        --display: "Lora", Georgia, serif;
+        --body: "Outfit", Arial, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--cream);
+        color: var(--text);
+        font-family: var(--body);
+        margin: 0;
+        overflow-x: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid #8e71b0;
+        outline-offset: 3px;
+      }
+      .wrap {
+        margin-inline: auto;
+        max-width: 1420px;
+        width: 90%;
+      }
+      .topbar {
+        background: var(--yellow);
+        border-bottom: 1px solid var(--line);
+        color: var(--grape);
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 9px;
+        text-align: center;
+      }
+      header {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        padding: 20px 5vw;
+      }
+      .brand {
+        align-items: center;
+        display: inline-flex;
+        font-family: var(--display);
+        font-size: 1.25rem;
+        font-weight: 600;
+        gap: 9px;
+        justify-self: start;
+      }
+      .brand-mark {
+        align-items: center;
+        background: var(--grape);
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        font-family: var(--body);
+        font-size: 0.7rem;
+        height: 31px;
+        justify-content: center;
+        width: 31px;
+      }
+      nav {
+        display: flex;
+        font-size: 0.78rem;
+        font-weight: 700;
+        gap: 25px;
+      }
+      nav a {
+        color: var(--muted);
+      }
+      nav a:hover {
+        color: var(--grape);
+      }
+      header > .button {
+        justify-self: end;
+      }
+      .button {
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.78rem;
+        font-weight: 800;
+        gap: 12px;
+        justify-content: center;
+        min-height: 47px;
+        padding: 0 21px;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+      .button:hover {
+        box-shadow: 0 10px 24px rgba(88, 67, 111, 0.13);
+        transform: translateY(-2px) rotate(-1deg);
+      }
+      .button-grape {
+        background: var(--grape);
+        color: #fff;
+      }
+      .button-white {
+        background: var(--paper);
+        border-color: var(--line);
+      }
+
+      .hero {
+        overflow: hidden;
+        padding: clamp(75px, 9vw, 130px) 0 100px;
+        position: relative;
+        text-align: center;
+      }
+      .hero::before,
+      .hero::after {
+        border-radius: 50%;
+        content: "";
+        filter: blur(3px);
+        height: 420px;
+        position: absolute;
+        width: 420px;
+        z-index: -1;
+      }
+      .hero::before {
+        background: var(--lavender);
+        left: -220px;
+        top: 50px;
+      }
+      .hero::after {
+        background: var(--mint);
+        right: -220px;
+        top: 120px;
+      }
+      .eyebrow {
+        align-items: center;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        display: inline-flex;
+        font-size: 0.67rem;
+        font-weight: 800;
+        gap: 8px;
+        letter-spacing: 0.08em;
+        margin: 0 0 25px;
+        padding: 9px 13px;
+        text-transform: uppercase;
+      }
+      .eyebrow::before {
+        background: #dd88a7;
+        border-radius: 50%;
+        content: "";
+        height: 8px;
+        width: 8px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        font-weight: 600;
+      }
+      h1 {
+        font-size: clamp(4.4rem, 8.7vw, 8.8rem);
+        letter-spacing: -0.065em;
+        line-height: 0.88;
+        margin: 0 auto;
+        max-width: 1180px;
+      }
+      h1 span {
+        color: var(--grape);
+        position: relative;
+        white-space: nowrap;
+      }
+      h1 span::after {
+        background: var(--yellow);
+        bottom: 7px;
+        content: "";
+        height: 14px;
+        left: 0;
+        position: absolute;
+        transform: rotate(-2deg);
+        width: 100%;
+        z-index: -1;
+      }
+      .hero > .wrap > p {
+        color: var(--muted);
+        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        line-height: 1.7;
+        margin: 32px auto;
+        max-width: 720px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        justify-content: center;
+      }
+      .happy-proof {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 35px;
+      }
+      .happy-proof span {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.68rem;
+        padding: 9px 12px;
+      }
+      .happy-proof b {
+        color: var(--grape);
+      }
+      .hero-stage {
+        height: 510px;
+        margin: 70px auto 0;
+        max-width: 1050px;
+        position: relative;
+      }
+      .mockup {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        box-shadow: 0 30px 80px rgba(88, 67, 111, 0.12);
+        height: 470px;
+        left: 12%;
+        overflow: hidden;
+        position: absolute;
+        text-align: left;
+        top: 0;
+        transform: rotate(-1deg);
+        width: 76%;
+      }
+      .mockbar {
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        font-size: 0.55rem;
+        justify-content: space-between;
+        padding: 16px 20px;
+      }
+      .mockbody {
+        background: var(--lavender);
+        height: 335px;
+        padding: 55px 50px;
+      }
+      .mockbody small {
+        font-size: 0.54rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .mockbody strong {
+        display: block;
+        font-family: var(--display);
+        font-size: clamp(2.4rem, 4.5vw, 4.5rem);
+        letter-spacing: -0.06em;
+        line-height: 0.95;
+        margin-top: 20px;
+        max-width: 570px;
+      }
+      .mockbody span {
+        background: var(--grape);
+        border-radius: 999px;
+        color: #fff;
+        display: inline-block;
+        font-size: 0.55rem;
+        font-weight: 800;
+        margin-top: 30px;
+        padding: 11px 14px;
+      }
+      .float-card {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(88, 67, 111, 0.1);
+        font-family: var(--display);
+        font-size: 1.2rem;
+        padding: 18px;
+        position: absolute;
+        text-align: left;
+      }
+      .float-card.one {
+        background: var(--yellow);
+        left: 0;
+        top: 110px;
+        transform: rotate(-7deg);
+        width: 170px;
+      }
+      .float-card.two {
+        background: var(--mint);
+        bottom: 10px;
+        right: 0;
+        transform: rotate(6deg);
+        width: 195px;
+      }
+      .float-card small {
+        display: block;
+        font-family: var(--body);
+        font-size: 0.55rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        margin-bottom: 28px;
+        text-transform: uppercase;
+      }
+
+      .rainbow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .rainbow span {
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        padding: 18px 10px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .rainbow span:nth-child(1) {
+        background: var(--lavender);
+      }
+      .rainbow span:nth-child(2) {
+        background: var(--mint);
+      }
+      .rainbow span:nth-child(3) {
+        background: var(--yellow);
+      }
+      .rainbow span:nth-child(4) {
+        background: var(--peach);
+      }
+      .rainbow span:nth-child(5) {
+        background: var(--rose);
+      }
+      .section {
+        padding: clamp(90px, 11vw, 155px) 0;
+      }
+      .section-head {
+        margin-bottom: 58px;
+        text-align: center;
+      }
+      .section h2 {
+        font-size: clamp(3.2rem, 6vw, 6.4rem);
+        letter-spacing: -0.06em;
+        line-height: 0.92;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .section-head > p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 22px auto 0;
+        max-width: 620px;
+      }
+      .cards {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .value-card {
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        min-height: 430px;
+        padding: 28px;
+      }
+      .value-card:nth-child(1) {
+        background: var(--lavender);
+        transform: rotate(-1deg);
+      }
+      .value-card:nth-child(2) {
+        background: var(--mint);
+        transform: translateY(15px);
+      }
+      .value-card:nth-child(3) {
+        background: var(--peach);
+        transform: rotate(1deg);
+      }
+      .value-card small {
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .value-card .big-icon {
+        align-items: center;
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 50%;
+        display: flex;
+        font-size: 2rem;
+        height: 90px;
+        justify-content: center;
+        margin: 60px auto;
+        width: 90px;
+      }
+      .value-card h3 {
+        font-size: 1.75rem;
+        letter-spacing: -0.04em;
+        margin: auto 0 10px;
+      }
+      .value-card p {
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      .work {
+        background: var(--lavender);
+      }
+      .projects {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        padding: 10px 0 20px;
+        scroll-snap-type: x mandatory;
+      }
+      .project {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        display: flex;
+        flex: 0 0 min(390px, 80vw);
+        flex-direction: column;
+        min-height: 390px;
+        padding: 27px;
+        scroll-snap-align: start;
+      }
+      .project:nth-child(2),
+      .project:nth-child(5) {
+        background: var(--yellow);
+      }
+      .project small {
+        color: #7b6293;
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+      .project h3 {
+        font-size: clamp(2rem, 3.5vw, 3.2rem);
+        letter-spacing: -0.055em;
+        line-height: 0.95;
+        margin: auto 0 12px;
+      }
+      .project p {
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.55;
+      }
+      .live {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.56rem;
+        margin-top: 10px;
+        padding: 7px 10px;
+        width: max-content;
+      }
+      .live::before {
+        color: #55ae78;
+        content: "●";
+        margin-right: 5px;
+      }
+
+      .pricing-grid {
+        display: grid;
+        gap: 13px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .plan {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        display: flex;
+        flex-direction: column;
+        min-height: 510px;
+        padding: 26px;
+        position: relative;
+      }
+      .plan:nth-child(1) {
+        background: var(--mint);
+      }
+      .plan:nth-child(2) {
+        background: var(--yellow);
+        transform: translateY(-16px);
+      }
+      .plan:nth-child(3) {
+        background: var(--peach);
+      }
+      .popular {
+        background: var(--grape);
+        border-radius: 999px;
+        color: #fff;
+        font-size: 0.52rem;
+        font-weight: 800;
+        padding: 6px 10px;
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        text-transform: uppercase;
+      }
+      .plan h3 {
+        font-family: var(--body);
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      .price {
+        font-family: var(--display);
+        font-size: clamp(3.1rem, 4vw, 4.5rem);
+        letter-spacing: -0.06em;
+        margin: 35px 0 11px;
+      }
+      .plan > p {
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+      .plan ul {
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        margin: 20px 0;
+        padding: 20px 0 0;
+      }
+      .plan li {
+        font-size: 0.72rem;
+      }
+      .plan li::before {
+        color: #7b6293;
+        content: "✓";
+        margin-right: 7px;
+      }
+      .plan .button {
+        margin-top: auto;
+        width: 100%;
+      }
+
+      .story-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: 1.2fr 0.9fr 0.9fr;
+      }
+      .story {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        display: flex;
+        flex-direction: column;
+        min-height: 345px;
+        padding: 27px;
+      }
+      .story:first-child {
+        background: var(--rose);
+      }
+      .story:nth-child(2) {
+        background: var(--mint);
+      }
+      .story:nth-child(3) {
+        background: var(--yellow);
+      }
+      .story small {
+        color: #7b6293;
+        font-size: 0.58rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+      .story h3 {
+        font-size: clamp(1.8rem, 3.2vw, 3rem);
+        letter-spacing: -0.05em;
+        line-height: 0.98;
+        margin: auto 0 12px;
+      }
+      .story p {
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.55;
+      }
+
+      .start {
+        background: var(--mint);
+        border-radius: 55px 55px 0 0;
+        display: grid;
+        gap: 8vw;
+        grid-template-columns: 0.9fr 1.1fr;
+        padding: clamp(90px, 10vw, 145px) 5vw;
+      }
+      .start h2 {
+        font-size: clamp(3.3rem, 6vw, 6.4rem);
+        letter-spacing: -0.06em;
+        line-height: 0.92;
+        margin: 0;
+      }
+      .start-copy > p:last-child {
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 560px;
+      }
+      form {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(88, 67, 111, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: clamp(25px, 4vw, 47px);
+      }
+      form label {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-size: 0.6rem;
+        font-weight: 800;
+        gap: 8px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      form input,
+      form select,
+      form textarea {
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        color: var(--text);
+        min-height: 49px;
+        padding: 12px;
+        text-transform: none;
+      }
+      form textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+      .fields {
+        display: flex;
+        gap: 11px;
+      }
+      .form-note {
+        color: var(--muted);
+        font-size: 0.62rem;
+        margin: 0;
+        text-align: center;
+      }
+      footer {
+        background: var(--grape);
+        color: #fff;
+        display: grid;
+        gap: 58px;
+        grid-template-columns: 1.25fr 0.75fr;
+        padding: 70px 5vw 30px;
+      }
+      footer .brand-mark {
+        background: var(--yellow);
+        color: var(--grape);
+      }
+      .footer-brand p {
+        color: rgba(255, 255, 255, 0.55);
+        font-family: var(--display);
+        font-size: clamp(2.1rem, 4vw, 4.1rem);
+        letter-spacing: -0.05em;
+        margin: 32px 0 0;
+      }
+      .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .footer-links div {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .footer-links span {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.58rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.75rem;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        font-size: 0.6rem;
+        grid-column: 1/-1;
+        justify-content: space-between;
+        padding-top: 19px;
+      }
+      @media (max-width: 1000px) {
+        header {
+          grid-template-columns: 1fr;
+          gap: 17px;
+        }
+        nav {
+          flex-wrap: wrap;
+          grid-row: 2;
+          justify-content: center;
+        }
+        header > .button {
+          display: none;
+        }
+        .cards,
+        .section-head,
+        .start {
+          grid-template-columns: 1fr;
+        }
+        .pricing-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .plan:nth-child(2) {
+          transform: none;
+        }
+        .story-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .story:first-child {
+          grid-column: 1/-1;
+        }
+      }
+      @media (max-width: 680px) {
+        nav {
+          gap: 10px 18px;
+        }
+        h1 {
+          font-size: clamp(4rem, 19vw, 6.1rem);
+        }
+        .hero-stage {
+          height: 430px;
+        }
+        .mockup {
+          height: 390px;
+          left: 2%;
+          width: 96%;
+        }
+        .mockbody {
+          height: 275px;
+          padding: 38px 25px;
+        }
+        .float-card {
+          display: none;
+        }
+        .rainbow {
+          grid-template-columns: 1fr;
+        }
+        .rainbow span {
+          padding: 10px;
+        }
+        .value-card {
+          transform: none !important;
+        }
+        .pricing-grid,
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+        .story:first-child {
+          grid-column: auto;
+        }
+        .fields {
+          flex-direction: column;
+        }
+        footer {
+          grid-template-columns: 1fr;
+        }
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 7px;
+        }
+      }
+    </style>
+    <link
+      rel="canonical"
+      href="https://elevaro.website/version-c-orchard.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://elevaro.website/version-c-orchard.html"
+    />
+    <meta property="og:title" content="Friendly Custom Websites | Elevaro" />
+    <meta
+      property="og:description"
+      content="Friendly, high-converting custom websites for growing local businesses. Elevaro packages start at $199."
+    />
+    <meta property="og:site_name" content="Elevaro" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Friendly Custom Websites | Elevaro" />
+    <meta
+      name="twitter:description"
+      content="Friendly, high-converting custom websites for growing local businesses. Elevaro packages start at $199."
+    />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <div class="topbar">
+      Soft design. Clear message. Strong next step. · Packages from $199
+    </div>
+    <header>
+      <a class="brand" href="#top"
+        ><span class="brand-mark">E</span><span>Elevaro</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#value">What you get</a><a href="#work">Work</a
+        ><a href="#pricing">Pricing</a><a href="#stories">Insights</a>
+      </nav>
+      <a class="button button-grape" href="#start">Let’s build yours ↗</a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="wrap">
+          <span class="eyebrow">Custom websites for local businesses</span>
+          <h1>A website that feels good—and <span>works hard.</span></h1>
+          <p>
+            Elevaro turns your business into a friendly, confident online
+            experience that helps customers understand, trust, and act.
+          </p>
+          <div class="actions">
+            <a class="button button-grape" href="#pricing"
+              >Find your package ↓</a
+            ><a class="button button-white" href="#work">Browse recent work</a>
+          </div>
+          <div class="happy-proof">
+            <span><b>2–3 weeks</b> typical launch</span
+            ><span><b>One-time</b> pricing</span
+            ><span><b>Mobile-first</b> design</span>
+          </div>
+          <div class="hero-stage" aria-label="Website concept preview">
+            <div class="mockup">
+              <div class="mockbar">
+                <span>YOUR BUSINESS</span><span>MENU · ABOUT · CONTACT</span>
+              </div>
+              <div class="mockbody">
+                <small>LOCAL · THOUGHTFUL · READY</small
+                ><strong>Make choosing you feel easy.</strong
+                ><span>GET STARTED →</span>
+              </div>
+            </div>
+            <div class="float-card one">
+              <small>What customers see</small>Clear, warm, credible.
+            </div>
+            <div class="float-card two">
+              <small>What customers do</small>Call, book, order, inquire.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="rainbow">
+        <span>Restaurants</span><span>Local services</span
+        ><span>Healthcare</span><span>Retail</span
+        ><span>Professional services</span>
+      </div>
+
+      <section class="section" id="value">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">A better customer journey</span>
+            <h2>Everything your website needs to feel easy.</h2>
+            <p>
+              A thoughtful experience earns attention gently—then helps people
+              move forward with confidence.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="value-card">
+              <small>01 · Understand</small>
+              <div class="big-icon">Aa</div>
+              <h3>A message people get</h3>
+              <p>
+                Clear page structure and copy direction that remove guesswork
+                from the offer.
+              </p>
+            </article>
+            <article class="value-card">
+              <small>02 · Trust</small>
+              <div class="big-icon">✦</div>
+              <h3>A look that feels established</h3>
+              <p>
+                Soft, polished design that is welcoming without losing
+                credibility.
+              </p>
+            </article>
+            <article class="value-card">
+              <small>03 · Act</small>
+              <div class="big-icon">→</div>
+              <h3>A next step that feels natural</h3>
+              <p>
+                Forms, calls, bookings, and actions placed where customers are
+                ready for them.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Selected live projects</span>
+            <h2>Real businesses, ready to be chosen.</h2>
+            <p>
+              Swipe through recent Elevaro restaurant landing-page launches.
+            </p>
+          </div>
+          <div class="projects">
+            <article class="project">
+              <small>Multi-location · Florida</small>
+              <h3>Grandma’s Secret</h3>
+              <p>
+                Live pages for Dania Beach and Sunny Isles with a consistent
+                digital foundation.
+              </p>
+              <span class="live">Live</span>
+            </article>
+            <article class="project">
+              <small>Restaurant · Key West</small>
+              <h3>Kennedy Cafe</h3>
+              <p>
+                A focused landing page designed around mobile customer
+                discovery.
+              </p>
+              <span class="live">Live</span>
+            </article>
+            <article class="project">
+              <small>Restaurant</small>
+              <h3>New York Pasta Garden</h3>
+              <p>
+                A clear online home connecting the restaurant to the next
+                action.
+              </p>
+              <span class="live">Live</span>
+            </article>
+            <article class="project">
+              <small>Restaurant</small>
+              <h3>Philly Kitchen</h3>
+              <p>
+                A mobile-ready launch that makes key information easy to reach.
+              </p>
+              <span class="live">Live</span>
+            </article>
+            <article class="project">
+              <small>Restaurant</small>
+              <h3>Silk Road Restaurant</h3>
+              <p>
+                A polished landing experience built for stronger credibility.
+              </p>
+              <span class="live">Live</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Friendly, clear pricing</span>
+            <h2>Pick a comfortable place to start.</h2>
+            <p>
+              Every package has a defined purpose, practical scope, and a clear
+              path toward launch.
+            </p>
+          </div>
+          <div class="pricing-grid">
+            <article class="plan">
+              <h3>Launch</h3>
+              <div class="price">$199</div>
+              <p>A welcoming one-page website.</p>
+              <ul>
+                <li>1 custom page</li>
+                <li>Up to 5 sections</li>
+                <li>Mobile-first design</li>
+                <li>Contact form</li>
+                <li>1 revision</li>
+              </ul>
+              <button
+                class="button button-white pick"
+                data-plan="Launch — $199"
+                type="button"
+              >
+                Choose Launch
+              </button>
+            </article>
+            <article class="plan">
+              <span class="popular">Popular</span>
+              <h3>Business</h3>
+              <div class="price">$499</div>
+              <p>A complete local business site.</p>
+              <ul>
+                <li>Up to 5 pages</li>
+                <li>Lead capture forms</li>
+                <li>SEO essentials</li>
+                <li>Analytics setup</li>
+                <li>2 revisions</li>
+              </ul>
+              <button
+                class="button button-grape pick"
+                data-plan="Business — $499"
+                type="button"
+              >
+                Choose Business
+              </button>
+            </article>
+            <article class="plan">
+              <h3>Scale</h3>
+              <div class="price">$999</div>
+              <p>More pages and richer capabilities.</p>
+              <ul>
+                <li>Up to 10 pages</li>
+                <li>Booking or commerce</li>
+                <li>Advanced forms</li>
+                <li>Performance tuning</li>
+                <li>3 revisions</li>
+              </ul>
+              <button
+                class="button button-white pick"
+                data-plan="Scale — $999"
+                type="button"
+              >
+                Choose Scale
+              </button>
+            </article>
+            <article class="plan">
+              <h3>Custom</h3>
+              <div class="price" style="font-size: 3rem">Let’s talk</div>
+              <p>For unique products and ideas.</p>
+              <ul>
+                <li>Custom scope</li>
+                <li>Tailored integrations</li>
+                <li>Flexible page count</li>
+                <li>Priority collaboration</li>
+                <li>Clear quote</li>
+              </ul>
+              <button
+                class="button button-white pick"
+                data-plan="Custom — Let’s talk"
+                type="button"
+              >
+                Share your idea
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stories">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Helpful before the first call</span>
+            <h2>Content that answers real questions.</h2>
+            <p>
+              Practical articles help the right customers discover the business
+              and arrive better informed.
+            </p>
+          </div>
+          <div class="story-grid">
+            <article class="story">
+              <small>Website strategy · 9 min</small>
+              <h3>Restaurant website cost in 2026</h3>
+              <p>
+                A useful guide to budgets, scope, and the costs owners often
+                forget.
+              </p>
+            </article>
+            <article class="story">
+              <small>Local SEO · 12 min</small>
+              <h3>Restaurant local SEO checklist</h3>
+              <p>
+                Twelve practical ways to strengthen discovery and customer
+                action.
+              </p>
+            </article>
+            <article class="story">
+              <small>Acquisition · 8 min</small>
+              <h3>Website vs. social media</h3>
+              <p>
+                How both channels support different parts of the customer
+                journey.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="start" id="start">
+        <div class="start-copy">
+          <span class="eyebrow">Let’s make it easy</span>
+          <h2>Tell us what customers should do next.</h2>
+          <p>
+            Share the business, goal, and package you are considering. Your
+            request will be delivered to Elevaro through FormSubmit.
+          </p>
+        </div>
+        <form
+          action="https://formsubmit.co/support@elevaro.website"
+          method="POST"
+          accept-charset="UTF-8"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Elevaro Orchard website project request"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <label
+            >Package<select id="plan" name="plan">
+              <option>Launch — $199</option>
+              <option selected>Business — $499</option>
+              <option>Scale — $999</option>
+              <option>Custom — Let’s talk</option>
+            </select></label
+          >
+          <div class="fields">
+            <label
+              >Your name<input
+                name="name"
+                autocomplete="name"
+                required /></label
+            ><label
+              >Email<input
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+            /></label>
+          </div>
+          <label
+            >Business name<input
+              name="business"
+              autocomplete="organization"
+              required
+          /></label>
+          <label
+            >What should the website help you do?<textarea
+              name="details"
+              placeholder="Generate leads, take bookings, sell online, or explain a new service…"
+              required
+            ></textarea>
+          </label>
+          <button class="button button-grape" type="submit">
+            Send project request ↗
+          </button>
+          <p class="form-note">
+            Protected by FormSubmit. You may be asked to complete a CAPTCHA.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <a class="brand" href="#top"
+          ><span class="brand-mark">E</span><span>Elevaro</span></a
+        >
+        <p>Warm welcome.<br />Clear next step.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <span>Explore</span><a href="#value">What you get</a
+          ><a href="#work">Work</a><a href="#pricing">Pricing</a
+          ><a href="#stories">Insights</a>
+        </div>
+        <div>
+          <span>Connect</span
+          ><a href="mailto:support@elevaro.website">Email us</a
+          ><a href="tel:+16507707788">Call us</a
+          ><a href="#start">Start a project</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Elevaro Solutions. All rights reserved.</span
+        ><span>Sterling, Virginia</span>
+      </div>
+    </footer>
+    <script>
+      const plan = document.querySelector("#plan");
+      document.querySelectorAll(".pick").forEach((button) =>
+        button.addEventListener("click", () => {
+          plan.value = button.dataset.plan;
+          document
+            .querySelector("#start")
+            .scrollIntoView({ behavior: "smooth" });
+        }),
+      );
+    </script>
+  </body>
+</html>
